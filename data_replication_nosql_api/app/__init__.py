@@ -3,6 +3,7 @@ from flask import Flask
 from flask_jwt_extended import JWTManager
 from .models import setup_db, mongo
 from .routes import init_app as init_routes
+from flask_cors import CORS
 
 # Initialize PyMongo
 # mongo = PyMongo()
@@ -10,6 +11,7 @@ from .routes import init_app as init_routes
 
 def create_app():
     app = Flask(__name__, instance_relative_config=False)
+    CORS(app)
     app.config.from_object('instance.config.Config')
 
     # Initialize app for PyMongo
