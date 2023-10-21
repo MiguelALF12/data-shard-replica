@@ -28,7 +28,7 @@ def fetch_user(user_id):
 @jwt_required()
 def change_user(user_id):
     data = request.get_json()
-    return update_user(user_id, data['name'], data['email'])
+    return update_user(user_id, data)
 
 
 @user_bp.route('/<user_id>', methods=['DELETE'])
@@ -42,14 +42,14 @@ def remove_user(user_id):
 @user_bp.route('/signup', methods=['POST'])
 def register_user():
     data = request.get_json()
-    user = create_user(data['name'], data['email'], data['password'])
+    user = create_user(data['name'], data['id'], data['password'], data['phoneNumber'], data['address'],data['occupation'] )
     return jsonify(user), 201
 
 
 @user_bp.route('/login', methods=['POST'])
 def login_user():
     data = request.get_json()
-    token = authenticate(data['email'], data['password'])
+    token = authenticate(data['id'], data['password'])
     if token:
         return jsonify({'access_token': token}), 200
     else:

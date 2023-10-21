@@ -15,3 +15,5 @@ build/
 *.egg-info/
 
 mongodb-cluster-docker-compose/
+
+data_replication_api/log.txt
