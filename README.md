@@ -35,4 +35,7 @@ Deployment is managed on DigitalOcean, although the API is not currently deploye
 - **Database**: MongoDB, utilizing Docker for container deployment.
 - **Deployment**: Intended for DigitalOcean (API not yet publicly available).
 
+## Acknowledgement
+Thanks to @minhhungit for its description and implementation of the mongoDB cluster architeture. It can be found [here](https://github.com/minhhungit/mongodb-cluster-docker-compose)
+
 
