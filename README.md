@@ -7,7 +7,7 @@
 This project consists of the backend API and logic for a web application that provides a CRUD dashboard, designed exclusively for managing user data. The API ensures efficient interaction and data manipulation without encompassing the frontend elements, as the frontend development was outside the scope of this project.
 
 ## Architecture
-The backend is structured on a microservices architecture pattern, utilizing Python and the Flask framework. It has been optimized for performance and ease of integration with frontend services.
+The backend is structured on a client/server architecture pattern, utilizing Python and the Flask framework. It has been optimized for performance and ease of integration with frontend services.
 
 <img src="https://github.com/MiguelALF12/data-shard-replica/blob/main/imgs/Arquitectura-0.jpeg" alt="Deployment architecture" width="700"/>
 
